@@ -492,4 +492,113 @@
     <wire from="(770,370)" to="(890,370)"/>
     <wire from="(890,290)" to="(890,350)"/>
   </circuit>
+  <circuit name="SixteenBitSubtractor">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SixteenBitSubtractor"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(200,440)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="B"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(220,500)" name="Constant"/>
+    <comp lib="0" loc="(250,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(730,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="borrow_out"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(760,360)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(260,440)" name="NOT Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(670,400)" name="SixteenBitAdder"/>
+    <wire from="(200,440)" to="(230,440)"/>
+    <wire from="(220,500)" to="(380,500)"/>
+    <wire from="(250,400)" to="(450,400)"/>
+    <wire from="(260,440)" to="(310,440)"/>
+    <wire from="(310,420)" to="(310,440)"/>
+    <wire from="(310,420)" to="(450,420)"/>
+    <wire from="(380,440)" to="(380,500)"/>
+    <wire from="(380,440)" to="(450,440)"/>
+    <wire from="(670,400)" to="(680,400)"/>
+    <wire from="(670,420)" to="(730,420)"/>
+    <wire from="(680,360)" to="(680,400)"/>
+    <wire from="(680,360)" to="(760,360)"/>
+  </circuit>
+  <circuit name="SixteenBitIncrement">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SixteenBitIncrement"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(150,330)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(170,450)" name="Constant"/>
+    <comp lib="0" loc="(220,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(650,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Increment"/>
+      <a name="type" val="output"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(590,310)" name="SixteenBitAdder"/>
+    <wire from="(150,330)" to="(370,330)"/>
+    <wire from="(170,450)" to="(320,450)"/>
+    <wire from="(220,230)" to="(230,230)"/>
+    <wire from="(230,230)" to="(230,310)"/>
+    <wire from="(230,310)" to="(370,310)"/>
+    <wire from="(320,350)" to="(320,450)"/>
+    <wire from="(320,350)" to="(370,350)"/>
+    <wire from="(590,310)" to="(620,310)"/>
+    <wire from="(620,230)" to="(620,310)"/>
+    <wire from="(620,230)" to="(650,230)"/>
+  </circuit>
+  <circuit name="SixteenBitDecrement">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SixteenBitDecrement"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(130,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(600,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Decrement"/>
+      <a name="radix" val="16"/>
+      <a name="type" val="output"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(90,370)" name="Constant">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(460,290)" name="SixteenBitSubtractor"/>
+    <wire from="(130,290)" to="(240,290)"/>
+    <wire from="(200,310)" to="(200,370)"/>
+    <wire from="(200,310)" to="(240,310)"/>
+    <wire from="(460,290)" to="(530,290)"/>
+    <wire from="(530,260)" to="(530,290)"/>
+    <wire from="(530,260)" to="(600,260)"/>
+    <wire from="(90,370)" to="(200,370)"/>
+  </circuit>
 </project>
